@@ -1,14 +1,16 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
-import CountriesPage from './components/CountriesPage';
+import WorldPage from './components/WorldPage';
 import Countries from './components/Countries';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Routes>
-        <Route path="/" element={<CountriesPage />} />
-        <Route path="/CountriesPage/:idName" element={<Countries />} />
+        <Route path="/" element={<WorldPage />} />
+        <Route path="/:name" element={<Countries />} />
       </Routes>
     </div>
   );

@@ -1,12 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { FaMicrophone } from 'react-icons/fa';
+import { AiTwotoneSetting, AiFillLeftSquare } from 'react-icons/ai';
 
 const Navbar = () => {
   return (
-    <div>
-      <Link to="/" elemen>
-        CountriesPage
-      </Link>
+    <div className="nav">
+      <AiFillLeftSquare />
+      <NavLink to="/">CountriesPage</NavLink>
+      <div>
+        <FaMicrophone />
+        <AiTwotoneSetting />
+      </div>
     </div>
   );
 };
