@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import continentsOfTheWorld from '../data/data';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countries);
+
   return (
     <div>
-      <ul>
+      <div>
+        <img src={`../images/Africa}.svg`} alt="continent-image" />
+      </div>
+      <ul className="continents">
         {' '}
         <>
           {countries.map((country) => (

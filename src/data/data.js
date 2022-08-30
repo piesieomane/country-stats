@@ -1,11 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const continents = [
+const continentsOfTheWorld = [
   {
     id: uuidv4(),
     name: 'Africa',
     map: '',
-    image: '/images/africa.svg',
+    image: '/images/Africa.svg',
   },
   {
     id: uuidv4(),
@@ -45,4 +45,4 @@ const continents = [
   },
 ];
 
-export default continents;
+export default continentsOfTheWorld;

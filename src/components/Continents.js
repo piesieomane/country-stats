@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import continents from '../data/data';
+import React from 'react';
+import continentsOfTheWorld from '../data/data';
 import { fetchCountries } from '../redux/countries/countries';
 import { Link } from 'react-router-dom';
 import '../styles/continents.scss';
@@ -13,20 +13,18 @@ const Continents = () => {
   };
 
   return (
-    <div>
-      <ul className="continents">
-        {continents.map(({ id, name, image }) => (
-          <li key={id}>
-            {name}
-            <Link to={`/${name}`}>
-              <button type="button" onClick={() => handleClick(name)}>
-                <BsFillArrowRightSquareFill />
-              </button>
-            </Link>
-            <img src={image} />
-          </li>
-        ))}
-      </ul>
+    <div className="continents">
+      {continentsOfTheWorld.map(({ id, name, image }) => (
+        <li key={id}>
+          {name}
+          <Link to={`/${name}`}>
+            <button type="button" onClick={() => handleClick(name)}>
+              <BsFillArrowRightSquareFill />
+            </button>
+          </Link>
+          <img src={image} />
+        </li>
+      ))}
     </div>
   );
 };

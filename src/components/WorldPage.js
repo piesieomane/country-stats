@@ -1,19 +1,17 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchCountries } from '../redux/countries/countries';
+import React from 'react';
+
 import Continents from './Continents';
 
 const WorldPage = () => {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchCountries());
-  // }, []);
-
   return (
     <>
-      <div>
+      <div className="world_map">
         <img src="/images/world.svg" alt="world-image" />
+        <div className="stats">
+          <p>STATS BY CONTINENTS</p>
+        </div>
       </div>
+
       <Continents />
     </>
   );
