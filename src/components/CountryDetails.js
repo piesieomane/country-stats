@@ -12,10 +12,9 @@ const CountryDetails = () => {
       {countries.map((country) => (
         <li key={country?.name.common}>
           <h1>{country?.name.common}</h1>
-
           <div className="map-wrapper">
             <MapContainer
-              center={country?.latlng}
+              center={{ lat: country?.latlng[0], lng: country?.latlng[1] }}
               zoom={6}
               scrollWheelZoom={false}
             >
@@ -23,7 +22,9 @@ const CountryDetails = () => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <Marker position={country?.latlng}>
+              <Marker
+                position={{ lat: country?.latlng[0], lng: country?.latlng[1] }}
+              >
                 <Popup>
                   {country?.name} <br /> {country?.name}
                 </Popup>
