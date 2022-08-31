@@ -10,6 +10,8 @@ const countryReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'FETCH_COUNTRIES/fulfilled':
       return action.payload;
+    case 'GET_COUNTRY/fulfilled':
+      return action.payload;
     default:
       return state;
   }

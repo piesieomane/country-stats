@@ -11,6 +11,7 @@ const Countries = () => {
   const dispatch = useDispatch();
   const handleClick = (name) => {
     dispatch(fetchCountryDetails(name));
+    console.log(name);
   };
 
   return (
