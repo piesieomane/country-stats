@@ -1,33 +1,30 @@
-import React, { useState } from 'react';
-import continents from '../data/data';
-import { useParams } from 'react-router';
-import { getCountries } from '../redux/countries/countries';
+import React from 'react';
+import continentsOfTheWorld from '../data/data';
+import { fetchCountries } from '../redux/countries/countries';
+import { Link } from 'react-router-dom';
 import '../styles/continents.scss';
 import { BsFillArrowRightSquareFill } from 'react-icons/bs';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const Continents = () => {
-  const { idName } = useParams();
   const dispatch = useDispatch();
-  const countriesOfContinent = useSelector((state) => state.countries);
-  console.log('fdfd', countriesOfContinent);
   const handleClick = (name) => {
-    dispatch(getCountries(name, idName));
+    dispatch(fetchCountries(name));
   };
 
   return (
-    <div>
-      <ul className="continents">
-        {continents.map(({ id, name, image }) => (
-          <li key={id}>
-            {name}
-            <img src={image} />
+    <div className="continents">
+      {continentsOfTheWorld.map(({ id, name, image }) => (
+        <li key={id}>
+          {name}
+          <Link to={`/${name}`}>
             <button type="button" onClick={() => handleClick(name)}>
               <BsFillArrowRightSquareFill />
             </button>
-          </li>
-        ))}
-      </ul>
+          </Link>
+          <img src={image} />
+        </li>
+      ))}
     </div>
   );
 };
