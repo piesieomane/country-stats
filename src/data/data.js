@@ -41,7 +41,7 @@ const continentsOfTheWorld = [
     id: uuidv4(),
     name: 'Antarctica',
     map: '',
-    image: '/images/antarctica.svg',
+    image: '/images/Antarctica.svg',
   },
 ];
 

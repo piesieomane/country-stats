@@ -1,22 +1,35 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { fetchCountryDetails } from '../redux/countries/countries';
 
 const CountryDetails = () => {
   const { countries } = useSelector((state) => state);
   console.log(countries);
-  //   const dispatch = useDispatch();
 
-  //   useEffect(() => {
-  //     dispatch(fetchCountryDetails());
-  //   }, []);
   return (
     <div>
       {countries.map((country) => (
         <li key={country?.name.common}>
           <h1>{country?.name.common}</h1>
-          <img src={country?.flags.png} alt="flag" />
 
+          <div className="map-wrapper">
+            <MapContainer
+              center={country?.latlng}
+              zoom={6}
+              scrollWheelZoom={false}
+            >
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={country?.latlng}>
+                <Popup>
+                  {country?.name} <br /> {country?.name}
+                </Popup>
+              </Marker>
+            </MapContainer>
+          </div>
           <p>
             The Capital of {country?.name.common} is{' '}
             <strong>{country?.capital}</strong>
