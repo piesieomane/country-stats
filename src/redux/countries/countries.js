@@ -3,6 +3,7 @@ import api from '../api';
 import axios from 'axios';
 
 const FETCH_COUNTRIES = 'FETCH_COUNTRIES';
+const GET_COUNTRY = 'GET_COUNTRY';
 const initialState = [];
 
 const countryReducer = (state = initialState, action) => {
@@ -19,6 +20,14 @@ export const fetchCountries = createAsyncThunk(
   async (name) => {
     const response = await axios.get(api);
     return response.data.filter((country) => country.region === name);
+  }
+);
+
+export const fetchCountryDetails = createAsyncThunk(
+  GET_COUNTRY,
+  async (name) => {
+    const response = await axios.get(api);
+    return response.data.filter((country) => country.name.common === name);
   }
 );
 
