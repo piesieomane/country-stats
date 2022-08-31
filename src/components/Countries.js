@@ -17,7 +17,11 @@ const Countries = () => {
   return (
     <div>
       <div>
-        <img src={`../images/Africa.svg`} alt="continent-image" />
+        <img
+          src={`../images/${countries[0].continents[0]}.svg`}
+          alt="continent-image"
+        />
+        <h1>{countries[0].continents[0]}</h1>
       </div>
       <ul className="continents">
         {' '}
