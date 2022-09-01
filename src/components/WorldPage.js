@@ -5,7 +5,7 @@ import '../styles/worldpage.scss';
 const WorldPage = () => {
   return (
     <>
-      <div className="world_map">
+      <div className="world_map" data-testid="home-link">
         <div className="world_map_container">
           <img src="/images/world.svg" alt="world-image" />
           <h2>THE WORLD MAP</h2>
