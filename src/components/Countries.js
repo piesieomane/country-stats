@@ -45,7 +45,7 @@ const Countries = () => {
               </div>
               <div className="item">
                 <p>TimeZone:</p>
-                <p>{country?.timezones}</p>
+                <p>{country?.timezones[0]}</p>
               </div>
             </li>
           ))}
