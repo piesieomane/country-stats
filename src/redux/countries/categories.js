@@ -14,9 +14,13 @@ const categoryReducer = (state = continentsOfTheWorld, action) => {
 export const getCategory = (category) => {
   return {
     type: GET_CATEGORY,
-    payload: continentsOfTheWorld.filter(
-      (continent) => continent.name === category
-    ),
+    payload: continentsOfTheWorld.filter((continent) => {
+      if (continent.name === category) {
+        return continent;
+      } else if (category === 'All') {
+        return continentsOfTheWorld;
+      }
+    }),
   };
 };
 

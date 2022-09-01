@@ -28,6 +28,7 @@ const Continents = () => {
           name="category"
         >
           <option value="Africa">AFRICA</option>
+          <option value="All">ALL</option>
           <option value="Europe">EUROPE</option>
           <option value="Oceania">OCEANIA</option>
           <option value="Asia">ASIA</option>
