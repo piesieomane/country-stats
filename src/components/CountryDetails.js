@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { fetchCountryDetails } from '../redux/countries/countries';
+import '../styles/countrydetails.scss';
 
 const CountryDetails = () => {
   const { countries } = useSelector((state) => state);
-  console.log(countries);
+  // console.log(countries);
 
   return (
-    <div>
+    <div className="info">
       {countries.map((country) => (
         <li key={country?.name.common}>
           <h1>{country?.name.common}</h1>

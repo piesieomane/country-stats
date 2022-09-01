@@ -5,16 +5,18 @@ import { AiTwotoneSetting, AiFillLeftSquare } from 'react-icons/ai';
 
 const Navbar = () => {
   return (
-    <div className="nav">
-      <NavLink to="/">
-        <AiFillLeftSquare />
-      </NavLink>
-      <h2>STATS OF COUNTRIES</h2>
-      <div>
-        <FaMicrophone />
-        <AiTwotoneSetting />
+    <header>
+      <div className="nav">
+        <NavLink to="/">
+          <AiFillLeftSquare />
+        </NavLink>
+        <h2>STATS OF COUNTRIES</h2>
+        <div>
+          <FaMicrophone />
+          <AiTwotoneSetting />
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 
