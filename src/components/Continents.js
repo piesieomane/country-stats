@@ -27,6 +27,7 @@ const Continents = () => {
           placeholder="Category"
           name="category"
         >
+          <option value="Select Continent">SELECT CONTINENT</option>
           <option value="Africa">AFRICA</option>
           <option value="All">ALL</option>
           <option value="Europe">EUROPE</option>
