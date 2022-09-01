@@ -1,6 +1,24 @@
 .countries {
   padding-top: 5rem;
 
+  .world_map_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    img {
+      cursor: pointer;
+      margin-bottom: 10px;
+      width: 60%;
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+  }
+
   .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
