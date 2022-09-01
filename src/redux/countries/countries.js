@@ -21,7 +21,13 @@ export const fetchCountries = createAsyncThunk(
   FETCH_COUNTRIES,
   async (name) => {
     const response = await axios.get(api);
-    return response.data.filter((country) => country.region === name);
+    return response.data.filter((country) => {
+      if (country.region === name) {
+        return country;
+      } else if (country.subregion === name) {
+        return country;
+      }
+    });
   }
 );
 
