@@ -44,6 +44,18 @@ const CountryDetails = () => {
             </p>
           </div>
           <div className="item">
+            <p>The Population: </p>
+            <p>
+              <strong>{country?.population}</strong>
+            </p>
+          </div>
+          <div className="item">
+            <p>Capital Name: </p>
+            <p>
+              <strong>{country?.capital}</strong>
+            </p>
+          </div>
+          <div className="item">
             <p>The languages they speak are:</p>
             <p>{Object.values(country?.languages)}</p>
           </div>
