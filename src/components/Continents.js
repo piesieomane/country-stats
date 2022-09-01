@@ -1,21 +1,43 @@
 import React from 'react';
 import continentsOfTheWorld from '../data/data';
 import { fetchCountries } from '../redux/countries/countries';
+import { getCategory } from '../redux/countries/categories';
 import { Link } from 'react-router-dom';
 import { BsFillArrowRightSquareFill } from 'react-icons/bs';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import '../styles/continents.scss';
 
 const Continents = () => {
+  const categories = useSelector((state) => state.category);
   const dispatch = useDispatch();
   const handleClick = (name) => {
     dispatch(fetchCountries(name));
   };
+  const changeState = (e) => {
+    dispatch(getCategory(e.target.value));
+  };
 
   return (
     <div className="continents">
+      <label htmlFor="category-select">
+        <select
+          type="text"
+          value="Select Continent"
+          onChange={changeState}
+          placeholder="Category"
+          name="category"
+        >
+          <option value="Africa">AFRICA</option>
+          <option value="Europe">EUROPE</option>
+          <option value="Oceania">OCEANIA</option>
+          <option value="Asia">ASIA</option>
+          <option value="North America">NORTH AMERICA</option>
+          <option value="South America">SOUTH AMERICA</option>
+          <option value="Antartica">ANTARCTICA</option>
+        </select>
+      </label>
       <ul className="continents_list">
-        {continentsOfTheWorld.map(({ id, name, image }) => (
+        {categories.map(({ id, name, image }) => (
           <li key={id}>
             <img src={image} alt="country" />
             <h2>{name}</h2>

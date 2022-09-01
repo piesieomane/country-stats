@@ -8,7 +8,7 @@ import '../styles/countries.scss';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countries);
-  const continentImage = countries[0].continents[0];
+  // const continentImage = countries[0].continents[0];
   const dispatch = useDispatch();
   const handleClick = (name) => {
     dispatch(fetchCountryDetails(name));
@@ -17,10 +17,6 @@ const Countries = () => {
 
   return (
     <div className="countries">
-      <div className="world_map_container">
-        <img src={`../images/${continentImage}.svg`} alt="continent-image" />
-        <h2>{continentImage}</h2>
-      </div>
       <ul className="row">
         {' '}
         <>

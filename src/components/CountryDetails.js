@@ -5,14 +5,12 @@ import '../styles/countrydetails.scss';
 
 const CountryDetails = () => {
   const { countries } = useSelector((state) => state);
-  // console.log(countries);
 
   return (
-    <div className="info">
+    <div className="details">
       {countries.map((country) => (
         <li key={country?.name.common}>
-          <h1>{country?.name.common}</h1>
-          <div className="map-wrapper">
+          <div className="map">
             <MapContainer
               center={{ lat: country?.latlng[0], lng: country?.latlng[1] }}
               zoom={6}
@@ -26,26 +24,33 @@ const CountryDetails = () => {
                 position={{ lat: country?.latlng[0], lng: country?.latlng[1] }}
               >
                 <Popup>
-                  {country?.name} <br /> {country?.name}
+                  {country?.name}
+                  <br />
+                  {country?.name}
                 </Popup>
               </Marker>
             </MapContainer>
           </div>
-          <p>
-            The Capital of {country?.name.common} is{' '}
-            <strong>{country?.capital}</strong>
-          </p>
-          <p>
-            And it has a population of <strong>{country?.population}</strong>{' '}
-            people
-          </p>
-          <p>
-            It is located in the subregion of{' '}
-            <strong>{country?.subregion}</strong>
-          </p>
-          <p>
-            The languages they speak are {Object.values(country?.languages)}
-          </p>
+          <div className="item">
+            <p>TimesZones:</p>
+            <p>
+              <strong>{country?.timezones}</strong>
+            </p>
+          </div>
+          <div className="item">
+            <p>The Official name: </p>
+            <p>
+              <strong>{country?.name.official}</strong>
+            </p>
+          </div>
+          <div className="item">
+            <p>The languages they speak are:</p>
+            <p>{Object.values(country?.languages)}</p>
+          </div>
+          <div className="item">
+            <p>Coat Of Arms</p>
+            <img src={country?.coatOfArms.svg} alt="awesome coat 0f arm" />
+          </div>
         </li>
       ))}
     </div>
