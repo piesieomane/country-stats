@@ -37,7 +37,7 @@
         padding: 10px;
 
         h2 {
-          font-size: 2rem;
+          font-size: 1.8rem;
           font-weight: 600;
         }
 
@@ -65,7 +65,11 @@
         margin: 5px;
 
         p {
-          font-size: 15px;
+          font-size: 13px;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          hyphens: auto;
+          white-space: nowrap;
         }
       }
 
