@@ -10,7 +10,6 @@ const Continents = () => {
   const dispatch = useDispatch();
   const handleClick = (name) => {
     dispatch(fetchCountries(name));
-    console.log(name);
   };
 
   return (
