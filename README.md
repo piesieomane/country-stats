@@ -26,7 +26,7 @@
 
 ## Live Demo
 
-- [Live Demo Link](https://63077d42683d8603489e104a--delicate-tulumba-2330ac.netlify.app/)
+- [Live Demo Link](https://6310ca669ed4140bf7e041c1--enchanting-scone-476b7e.netlify.app/)
 
 ### Click here for Video Link
 
@@ -36,11 +36,11 @@
 
 To get a local copy up and running follow these simple steps:
 
-- Copy this link `https://github.com/piesieomane/covid-stat.git`.
+- Copy this link `https://github.com/piesieomane/country-stat.git`.
 - Get the directory that you want to clone the repository.
 - Open the command prompt in this directory.
-- Write `git clone `https://github.com/piesieomane/covid-stat.git``.
-- Go to the repository folder in your command prompt, run `cd space-travellers-hub`.
+- Write `git clone `https://github.com/piesieomane/country-stat.git``.
+- Go to the repository folder in your command prompt, run `cd country-stat`.
 - Run `npm install`
 
 ### Prerequisites
