@@ -6,8 +6,10 @@ import { AiTwotoneSetting, AiFillLeftSquare } from 'react-icons/ai';
 const Navbar = () => {
   return (
     <div className="nav">
-      <AiFillLeftSquare />
-      <NavLink to="/">CountriesPage</NavLink>
+      <NavLink to="/">
+        <AiFillLeftSquare />
+      </NavLink>
+      <h2>STATS OF COUNTRIES</h2>
       <div>
         <FaMicrophone />
         <AiTwotoneSetting />
