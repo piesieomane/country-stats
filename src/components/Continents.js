@@ -34,7 +34,7 @@ const Continents = () => {
           <option value="Asia">ASIA</option>
           <option value="North America">NORTH AMERICA</option>
           <option value="South America">SOUTH AMERICA</option>
-          <option value="Antarctica">ANTARCTICA</option>
+          <option value="Antarctic">ANTARCTICA</option>
         </select>
       </label>
       <ul className="continents_list">
