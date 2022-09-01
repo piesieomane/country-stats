@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { BsFillArrowRightSquareFill } from 'react-icons/bs';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { fetchCountryDetails } from '../redux/countries/countries';
-//import continentsOfTheWorld from '../data/data';
+import '../styles/countries.scss';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countries);
@@ -15,31 +15,33 @@ const Countries = () => {
   };
 
   return (
-    <div>
-      <div>
-        <img
-          src={`../images/${countries[0].continents[0]}.svg`}
-          alt="continent-image"
-        />
-        <h1>{countries[0].continents[0]}</h1>
-      </div>
-      <ul className="continents">
+    <div className="countries">
+      <ul className="row">
         {' '}
         <>
           {countries.map((country) => (
             <li key={country?.name.common}>
-              <h1>{country?.name.common}</h1>
-              <Link to={`/:/${country?.name.common}`}>
-                <button
-                  type="button"
-                  onClick={() => handleClick(country?.name.common)}
-                >
-                  <BsFillArrowRightSquareFill />
-                </button>
-              </Link>
+              <div className="list">
+                <h2>{country?.name.common}</h2>
+                <Link to={`/:/${country?.name.common}`}>
+                  <BsFillArrowRightCircleFill
+                    onClick={() => handleClick(country?.name.common)}
+                  />
+                </Link>
+              </div>
               <img src={country?.flags.png} alt="flag" />
-              <p>{country?.capital}</p>
-              <p>{country?.subregion}</p>
+              <div className="item">
+                <p>Capital:</p>
+                <p>{country?.capital}</p>
+              </div>
+              <div className="item">
+                <p>SubRegion:</p>
+                <p>{country?.subregion}</p>
+              </div>
+              <div className="item">
+                <p>TimeZone:</p>
+                <p>{country?.timezones}</p>
+              </div>
             </li>
           ))}
         </>
