@@ -31,13 +31,6 @@ export const fetchCountries = createAsyncThunk(
   }
 );
 
-// export const fetchCountryDetails = createAsyncThunk(
-//   GET_COUNTRY,
-//   async (name) => {
-//     const response = await axios.get(api);
-//     return response.data.filter((country) => country.name.common === name);
-//   }
-// );
 export const fetchCountryDetails = (name) => {
   return { type: GET_COUNTRY, payload: name };
 };

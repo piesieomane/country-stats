@@ -1,5 +1,4 @@
 import React from 'react';
-import continentsOfTheWorld from '../data/data';
 import { fetchCountries } from '../redux/countries/countries';
 import { getCategory } from '../redux/countries/categories';
 import { Link } from 'react-router-dom';

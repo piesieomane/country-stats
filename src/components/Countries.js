@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -8,7 +8,6 @@ import '../styles/countries.scss';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countries);
-  // const continentImage = countries[0].continents[0];
   const dispatch = useDispatch();
   const handleClick = (name) => {
     dispatch(fetchCountryDetails(name));
