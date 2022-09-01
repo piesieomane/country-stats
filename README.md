@@ -30,7 +30,7 @@
 
 ### Click here for Video Link
 
-- [Video link](https://www.loom.com/share/667175bde7694)
+- [Video link](https://www.loom.com/share/d1ba867605ec4c8bbaec12182d71aecb4)
 
 ## Getting Started
 

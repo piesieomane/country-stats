@@ -1,5 +1,4 @@
 import React from 'react';
-import continentsOfTheWorld from '../data/data';
 import { fetchCountries } from '../redux/countries/countries';
 import { getCategory } from '../redux/countries/categories';
 import { Link } from 'react-router-dom';
@@ -27,14 +26,15 @@ const Continents = () => {
           placeholder="Category"
           name="category"
         >
-          <option value="Africa">AFRICA</option>
+          <option value="Select Continent">SELECT CONTINENT</option>
           <option value="All">ALL</option>
+          <option value="Africa">AFRICA</option>
           <option value="Europe">EUROPE</option>
           <option value="Oceania">OCEANIA</option>
           <option value="Asia">ASIA</option>
           <option value="North America">NORTH AMERICA</option>
           <option value="South America">SOUTH AMERICA</option>
-          <option value="Antarctica">ANTARCTICA</option>
+          <option value="Antarctic">ANTARCTICA</option>
         </select>
       </label>
       <ul className="continents_list">
