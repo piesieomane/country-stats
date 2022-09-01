@@ -26,7 +26,7 @@
 
 ## Live Demo
 
-- [Live Demo Link](https://6310ca669ed4140bf7e041c1--enchanting-scone-476b7e.netlify.app/)
+- [Live Demo Link](https://6310ea24b8c15700086fe617--enchanting-scone-476b7e.netlify.app/)
 
 ### Click here for Video Link
 
